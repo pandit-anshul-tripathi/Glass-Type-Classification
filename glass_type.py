@@ -97,7 +97,7 @@ if 'Pie Chart' in plot_types:
   st.subheader('Pie Chart')
   glass_type_count = glass_df['GlassType'].value_counts()
   plt.figure(figsize = (12,6))
-  plt.pie(glass_type_count, labels = glass_type_count.index, autopct = '%1.2f%%', start_angle = 30)
+  plt.pie(glass_type_count, labels = glass_type_count.index, autopct = '%1.2f%%', startangle = 30)
   st.pyplot()
 if 'Coorelation Heatmap' in plot_types:
   st.subheader('Coorelation Heatmap')
