@@ -84,7 +84,7 @@ if 'Histogram' in plot_types:
   st.pyplot()
 if 'Boxplot' in plot_types:
   st.subheader('Boxplot')
-  columns = st.sidebar.multiselect("Select Features to create Boxplot", ('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
+  columns = st.sidebar.selectbox("Select Features to create Boxplot", ('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
   plt.figure(figsize=(12,6))
   sns.boxplot(glass_df[columns])
   st.pyplot()
