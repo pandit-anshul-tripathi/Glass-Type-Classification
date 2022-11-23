@@ -123,7 +123,7 @@ ca = st.sidebar.slider('Input Ca', float(glass_df['Ca'].min()), float(glass_df['
 ba = st.sidebar.slider('Input Ba', float(glass_df['Ba'].min()), float(glass_df['Ba'].max()))
 fe = st.sidebar.slider('Input Fe', float(glass_df['Fe'].min()), float(glass_df['Fe'].max()))
 st.sidebar.subheader('Choose classifier')
-classifier = st.sidebar.selectbox('Classifier', ('Support Vector Machines', 'Random Forest Classifier', 'LogisticRegression'))
+classifier = st.sidebar.selectbox('Classifier', ('Support Vector Machines', 'Random Forest Classifier', 'Logistic Regression'))
 if classifier == 'Support Vector Machines':
   st.sidebar.subheader('Model Hyper Parameters')
   c_value = st.sidebar.number_input('C', 1,100,step = 1)
