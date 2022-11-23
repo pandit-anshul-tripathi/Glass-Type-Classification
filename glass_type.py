@@ -160,8 +160,10 @@ if classifier == 'Logistic Regression':
   c_value = st.sidebar.number_input('c', 1, 100, step = 1)
   max_iter_input = st.sidebar.number_input('Maximum Iterations', 10, 1000, step = 10)
   if st.sidebar.button('Classify'):
+    st.subheader('Logistic Regression')
     log_reg = LogisticRegression(C = c_value, max_iter = max_iter_input)
     log_reg.fit(X_train, y_train)
+    y_pred = log_reg.predict(X_test)
     accuracy = log_reg.score(X_train, y_train)
     glass_type = prediction(log_reg,ri, na, mg, al, si, k, ca, ba, fe)
     st.write('The type of glass predicted is :', glass_type)
